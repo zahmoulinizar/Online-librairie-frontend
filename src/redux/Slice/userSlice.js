@@ -133,7 +133,7 @@ export const forgetPassword = createAsyncThunk(
   async (email, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/user/forgot`,
+        process.env.REACT_APP_BASE_URL +`/user/forgot`,
         email
       );
       return res.data;

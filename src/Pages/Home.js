@@ -30,7 +30,7 @@ export default function Home() {
         // header section
       }
       <section className="d-lg-flex justify-content-between  d-block">
-        <div >
+        <div className="d-flex flex-wrap" >
           <Image src={banner}   alt="" height="100%"/>;
         </div>
         <div className="h-100 border border-2" style={{ height: "600px" }}>
