@@ -31,7 +31,7 @@ export default function Home() {
       }
       <section className="d-lg-flex justify-content-between  d-block">
         <div className="d-flex flex-wrap" >
-          <Image src={banner}   alt="" height="100%" fluid/>
+          <Image src={banner}   alt="" height="100%"/>
         </div>
         <div className="h-100 border border-2" style={{ height: "600px" }}>
           <video className="d-block w-100" autoPlay a muted>
