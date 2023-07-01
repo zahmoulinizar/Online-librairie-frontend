@@ -29,13 +29,13 @@ export default function Home() {
       {
         // header section
       }
-      <section className="d-lg-flex justify-content-between  d-block " >
-        <div className="d-flex flex-wrap" >
-          <Image src={banner}   alt="" height="100%" responsive/>
+      <section className="d-md-flex justify-content-between  d-block row">
+        <div  className="col-md-6 col-12">
+          <Image src={banner}  width="100%" alt="" height="100%" responsive/>
         </div>
-        <div className="h-100 border border-2" style={{ height: "600px" }}>
-          <video className="d-block w-100" autoPlay a muted>
-            <source src={video2} type="video/mp4" allowFullScreen />
+        <div className="h-100 border border-2 col-md-6 col-12" style={{ height: "600px"}}>
+          <video className="w-100" autoPlay a muted>
+            <source src={video2} type="video/mp4" />
           </video>
           <div className="bg-dark"></div>
         </div>
