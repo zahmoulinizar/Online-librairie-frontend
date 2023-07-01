@@ -65,8 +65,7 @@ export const updateUser = createAsyncThunk(
   "auth/updateUser",
   async (user, { rejectWithValue }) => {
     try {
-      const res = await axios.put(
-        process.env.REACT_APP_BASE_URL +"/user/update",
+      const res = await axios.put(process.env.REACT_APP_BASE_URL +"/user/update",
         {
           userName: user.userName,
           password: user.password,
@@ -110,8 +109,7 @@ export const updatePassword = createAsyncThunk(
   async ({ id , password} ,{ rejectWithValue }) => {
     console.log(password)
     try {
-      const res = await axios.put(
-        process.env.REACT_APP_BASE_URL +`/user/update-password/${id}`,
+      const res = await axios.put(process.env.REACT_APP_BASE_URL +`/user/update-password/${id}`,
         {
           password:password,
         },
@@ -132,10 +130,7 @@ export const forgetPassword = createAsyncThunk(
   "auth/forgetPasswod",
   async (email, { rejectWithValue }) => {
     try {
-      const res = await axios.post(
-        process.env.REACT_APP_BASE_URL +`/user/forgot`,
-        email
-      );
+      const res = await axios.post(process.env.REACT_APP_BASE_URL +`/user/forgot`,email);
       return res.data;
     } catch (error) {
       console.log(error);
