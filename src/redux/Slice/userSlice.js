@@ -18,7 +18,7 @@ export const registerItem = createAsyncThunk(
   "auth/registerItem",
   async (user, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:8000/user/register", user);
+      const res = await axios.post(process.env.REACT_APP_BASE_URL +"/user/register", user);
       localStorage.setItem("token", res.data.token);
       console.log(res.data);
       return res.data;
@@ -32,7 +32,7 @@ export const loginItem = createAsyncThunk(
   "auth/loginItem",
   async (user, { rejectWithValue }) => {
     try {
-      const res = await axios.post("http://localhost:8000/user/login", {
+      const res = await axios.post(process.env.REACT_APP_BASE_URL +"/user/login", {
         email: user.email,
         password: user.password,
       });
@@ -49,7 +49,7 @@ export const getUser = createAsyncThunk(
   "auth/getUser",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8000/user/profile", {
+      const res = await axios.get(process.env.REACT_APP_BASE_URL +"/user/profile", {
         headers: {
           "x-auth-token": localStorage.getItem("token"),
         },
@@ -66,7 +66,7 @@ export const updateUser = createAsyncThunk(
   async (user, { rejectWithValue }) => {
     try {
       const res = await axios.put(
-        "http://localhost:8000/user/update",
+        process.env.REACT_APP_BASE_URL +"/user/update",
         {
           userName: user.userName,
           password: user.password,
@@ -92,7 +92,7 @@ export const confirmCode = createAsyncThunk(
   async ({ id, code }, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        `http://localhost:8000/user/${id}/validate-code`,
+        process.env.REACT_APP_BASE_URL +`/user/${id}/validate-code`,
         {
           code: code,
         }
@@ -111,7 +111,7 @@ export const updatePassword = createAsyncThunk(
     console.log(password)
     try {
       const res = await axios.put(
-        `http://localhost:8000/user/update-password/${id}`,
+        process.env.REACT_APP_BASE_URL +`/user/update-password/${id}`,
         {
           password:password,
         },

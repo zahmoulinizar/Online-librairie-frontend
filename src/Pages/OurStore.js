@@ -20,7 +20,7 @@ export default function OurStore() {
   useEffect(() => {
     // Make an HTTP request to fetch the sums of data
     axios
-      .get("http://localhost:8000/prod/sumCategory")
+      .get(process.env.REACT_APP_BASE_URL +"/prod/sumCategory")
       .then((response) => {
         setSums(response.data);
       })
@@ -37,7 +37,7 @@ export default function OurStore() {
   useEffect(() => {
     // Make an HTTP request to search by category
     axios
-      .get("http://localhost:8000/prod/search-by-category", {
+      .get(process.env.REACT_APP_BASE_URL +"/prod/search-by-category", {
         params: { category },
       })
       .then((response) => {

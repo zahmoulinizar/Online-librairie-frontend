@@ -17,7 +17,7 @@ export const AddProd = createAsyncThunk(
   async (product, { rejectWithValue }) => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/prod/newProd",
+        process.env.REACT_APP_BASE_URL +"/prod/newProd",
         product ,
         {
           headers: {
@@ -37,7 +37,7 @@ export const getProd = createAsyncThunk(
   "prod/getProd",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.get(`http://localhost:8000/prod/getProd/${id}`);
+      const res = await axios.get(process.env.REACT_APP_BASE_URL + `/prod/getProd/${id}`);
 
       console.log(res.data);
       return res.data;
@@ -51,7 +51,7 @@ export const getAllProducts = createAsyncThunk(
   "prod/getAllProducts",
   async (products, { rejectWithValue }) => {
     try {
-      const res = await axios.get("http://localhost:8000/prod/allProd");
+      const res = await axios.get(process.env.REACT_APP_BASE_URL +"/prod/allProd");
       return res.data;
     } catch (error) {
       console.log(error);
@@ -63,7 +63,7 @@ export const deleteProd = createAsyncThunk(
   "prod/deleteProd",
   async (id, { rejectWithValue }) => {
     try {
-      const res = await axios.delete(`http://localhost:8000/prod/delete/${id}`,
+      const res = await axios.delete(process.env.REACT_APP_BASE_URL +`/prod/delete/${id}`,
       {
         headers: {
           "x-auth-token": localStorage.getItem("token"),
@@ -83,7 +83,7 @@ export const updateProd = createAsyncThunk(
     console.log(product)
     console.log(id)
     try {
-      const res = await axios.put(`http://localhost:8000/prod/updateProd/${id}`, {
+      const res = await axios.put(process.env.REACT_APP_BASE_URL +`/prod/updateProd/${id}`, {
         title: product.title,
         price: product.price,
         desc: product.desc,

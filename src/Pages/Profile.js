@@ -22,7 +22,7 @@ export default function Profile() {
   const [users, setUsers] = useState([]);
   function getUsers() {
     axios
-      .get("http://localhost:8000/user/Profile", {
+      .get(process.env.REACT_APP_BASE_URL +"/user/Profile", {
         headers: {
           "x-auth-token": localStorage.getItem("token"),
         },
