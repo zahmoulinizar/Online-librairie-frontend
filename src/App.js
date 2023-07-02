@@ -14,7 +14,7 @@ import Login from './Pages/Login';
 import Footer from "./Components/footer/Footer"
 import About from './Pages/About';
 import OurStore from './Pages/OurStore';
-import ProdDetails from './Pages/Prod-details/ProdDetails';
+import ProdDetails from './Pages/ProdDetails';
 import UpdateProd from './Pages/UpdateProd';
 import New from './Pages/New';
 import Promotion from './Pages/Promotion';

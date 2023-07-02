@@ -30,13 +30,13 @@ export default function ProdDetails() {
       <div>
         <h2 className="text-center">{product?.title}</h2>
       </div>
-      <Row className=" m-2 p-4 gap-0  h-75 rounded-8"style={{ backgroundColor: "#001f3f" , border: "3px solid #001f3f"}}
+      <Row className=" m-2 p-2 gap-0  h-100 rounded-8 p-md-1 p-sm-0"style={{ backgroundColor: "#001f3f" , border: "3px solid #001f3f"}}
 >
-        <Col className="col-12  p-4 bg-white col-lg-6 rounded-8" style={{ border: "3px solid #001f3f" }}>
+        <Col className="col-12  p-2 bg-white col-lg-6 rounded-8 p-md-1 p-sm-0" style={{ border: "3px solid #001f3f" }}>
           <img src={product?.image?.url} alt="cover img" width="100%"  className="rounded-8"/>
         </Col>
-        <Col className="col-12 d-flex  p-3  bg-white  col-lg-6 rounded-8" style={{ border: "3px solid #001f3f" }}>
-          <ListGroup className="rounded-8" style={{ border: "3px solid #001f3f" }}>
+        <Col className="col-12 d-flex  p-2  bg-white  col-lg-6 rounded-8 p-md-1 p-sm-0" style={{ border: "3px solid #001f3f" }}>
+          <ListGroup className="rounded-8 w-100" style={{ border: "3px solid #001f3f" }}>
             <ListGroup.Item  style={{ borderBottom: "3px solid #001f3f"}}>
               <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Publisher :</strong> {product?.publisher}</div>
             </ListGroup.Item>
