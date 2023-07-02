@@ -1,15 +1,13 @@
 import React from "react";
 import {  useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getProd } from "../../redux/Slice/ProdSlice";
+import { getProd } from "../redux/Slice/ProdSlice";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 import { AiOutlineCheck } from "react-icons/ai";
 import { CgUnavailable } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Container, Row } from "react-bootstrap";
-
-//import './prodDetails.css'
 
 export default function ProdDetails() {
   const product = useSelector((state) => state.prod.product);
