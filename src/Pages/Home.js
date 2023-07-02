@@ -19,21 +19,24 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getAllProducts());
+    // 👇️ scroll to top on page load
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }, []);
 
   //get  product from slice
 
   const prod = useSelector((state) => state.prod.products);
+  
   return (
     <div>
       {
         // header section
       }
       <section className="d-md-flex justify-content-between  d-block row">
-        <div  className="col-md-6 col-12">
+        <div  className="col-lg-6 col-12">
           <Image src={banner}  width="100%" alt="" height="100%" responsive/>
         </div>
-        <div className="h-100 border border-2 col-md-6 col-12" style={{ height: "600px"}}>
+        <div className="h-100 border border-2 col-lg-6 col-12" style={{ height: "600px"}}>
           <video className="w-100" autoPlay a muted>
             <source src={video2} type="video/mp4" />
           </video>
@@ -58,7 +61,7 @@ export default function Home() {
                 key={product._id}
                 className="p-2 text-center  m-auto m-md-3"
               >
-                <Card.Title>{product.title}</Card.Title>
+                <Card.Title style={{color: "#001f3f"}}>{product.title}</Card.Title>
                 <Card.Img
                   variant="top"
                   src={product.image?.url}
@@ -67,10 +70,10 @@ export default function Home() {
                   height="350"
                 />
                 <Card.Body className="d-flex flex-column gap-2">
-                  <Card.Title className="d-flex justify-content-around gap-5">
+                  <Card.Title className="d-flex justify-content-around gap-5" style={{color: "#001f3f"}}>
                     ${product.price}
                   </Card.Title>
-                  <Card.Title className="text-muted">
+                  <Card.Title  style={{ color: "#85144b" }}>
                     {product.publisher}
                   </Card.Title>
                   <Card.Title>
@@ -87,8 +90,10 @@ export default function Home() {
                   </Card.Title>
                 </Card.Body>
                 <Card.Link className="d-flex justify-content-center gap-3" >
-                  <Link to={`/Prod-details/${product._id}`} ><AiOutlineEye /></Link>
-                  <Link onClick={(()=> dispatch(addtoCart(product)))}><AiOutlineShoppingCart/></Link>
+                  <Link to={`/Prod-details/${product._id}`} style={{ color: "#85144b" }} onClick={() => {
+                  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+                }} ><AiOutlineEye /></Link>
+                  <Link onClick={(()=> dispatch(addtoCart(product)))} style={{ color: "#85144b" }}><AiOutlineShoppingCart/></Link>
                 </Card.Link>
               </Card>
             ))}

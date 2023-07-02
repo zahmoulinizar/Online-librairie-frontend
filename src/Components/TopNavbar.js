@@ -59,7 +59,7 @@ export default function TopNavbar() {
   const { cart, total } = useSelector((state) => state.shopCart);
 
   return (
-    <div className="TopNavBar">
+    <div className="TopNavBar " id="top">
       <p
         className=" w-100 text-center text-white fs-6 p-2"
         style={{ backgroundColor: "#001f3f" }}
@@ -74,9 +74,9 @@ export default function TopNavbar() {
         collapseOnSelect
         expand="lg"
         variant="info"
-        className="d-flex justify-content-between"
+        className="d-flex justify-content-between navbar-fixed-top navbar-fixed-top"
       >
-        <Container className=" flex-lg-wrap d-flex justify-content-between">
+        <Container className=" flex-lg-wrap d-flex justify-content-between sticky-top">
           <Link to="/">
             <img
               src={logo}
@@ -97,6 +97,7 @@ export default function TopNavbar() {
                 className="text-decoration-none"
                 style={{ color: "#85144b" }}
                 to="/"
+                activeClass="active" smooth spy
               >
                 HOME
               </Link>
@@ -148,34 +149,38 @@ export default function TopNavbar() {
               {!auth.isLogin ? (
                 <>
                   <Button variant="white" onClick={handleShow}>
-                    <h4 className="text-black">
+                    <h4 style={{ color: "#85144b" }}>
                       <AiOutlineUser />
                     </h4>
                   </Button>
-                  <Offcanvas show={show} onHide={handleClose} placement="end">
+                  <Offcanvas show={show} onHide={handleClose} placement="end" >
                     <Offcanvas.Header closeButton>
-                      <Offcanvas.Title className="ms-4 fs-3 text-black">
+                      <Offcanvas.Title className="ms-4 fs-3 " style={{color: "#001f3f" }}>
                         Login
                       </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
                       <Form className="w-100 p-4 d-flex flex-column gap-3 ">
                         <Form.Group controlId="formGroupEmail">
-                          <Form.Label className="fs-5 text-black">
+                          <Form.Label className="fs-5 " style={{color: "#001f3f" }}>
                             Email Address{" "}
-                            <span className=" text-danger">*</span>
+                            <span style={{ color: "#85144b" }}>*</span>
                           </Form.Label>
                           <Form.Control
+                          className="d-flex flex-column flex-wrap gap-4 rounded-5 "
+                          style={{ border: "3px solid #001f3f", color: "#85144b" }}
                             type="email"
                             placeholder="Enter email"
                             onChange={(e) => setEmail(e.target.value)}
                           />
                         </Form.Group>
                         <Form.Group controlId="formGroupPassword">
-                          <Form.Label className="fs-5 text-black">
-                            Password <span className=" text-danger">*</span>
+                          <Form.Label className="fs-5 " style={{color: "#001f3f" }}>
+                            Password <span  style={{ color: "#85144b" }}>*</span>
                           </Form.Label>
                           <Form.Control
+                          className="d-flex flex-column flex-wrap gap-4 rounded-5 "
+                          style={{ border: "3px solid #001f3f", color: "#85144b" }}
                             type="password"
                             placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
@@ -183,23 +188,25 @@ export default function TopNavbar() {
                         </Form.Group>
 
                         <Button
-                          className="w-100  mt-3 fs-4  text-white"
-                          variant="dark"
+                         className="w-100  text-center fs-5  p-1 text-uppercase  rounded-3 "
+                         style={{ backgroundColor: "#001f3f" }}
                           type="submit"
                           onClick={loginHandler}
                         >
                           Sign In
                         </Button>
                         <Link
-                          to="/reset"
-                          className="w-100  text-center fs-5 text-dark text-decoration-underline "
+                          to="/login"
+                          className="w-100  text-center fs-5  text-decoration-underline "
+                          style={{ color: "#85144b" }}
                         >
                           {" "}
                           Forget your password ?
                         </Link>
                         <Link
                           to="/register"
-                          className="w-100 border border-2 border-dark text-center fs-5 text-black p-1 text-uppercase"
+                          className="w-100  text-center fs-5 rounded-3 p-1 text-uppercase"
+              style={{ border: "3px solid #001f3f", color: "#001f3f" }}
                         >
                           Create account{" "}
                         </Link>
@@ -209,6 +216,7 @@ export default function TopNavbar() {
                 </>
               ) : (
                 <NavDropdown
+
                   title={
                     <img
                       className="rounded-circle object-cover"
@@ -221,13 +229,13 @@ export default function TopNavbar() {
                   }
                   id="navbarScrollingDropdown"
                 >
-                  <div className="d-flex flex-column gap-2 p-1">
-                    <Link to="/Profile" className="w-75  fs-5 text-black p-1 ">
+                  <div className="w-100 h-100 d-flex flex-column flex-wrap  justify-content-center gap-1 rounded-8 bg-none">
+                    <Link to="/Profile" className="w-100  fs-5 rounded-3 ps-3 text-white mb-2 " style={{ backgroundColor: "#001f3f" }}>
                       My Profile
                     </Link>
                     <Link
                       onClick={logoutHandler}
-                      className="w-75  fs-5 text-black p-1 "
+                      className="w-100  fs-5 rounded-3 ps-3 text-white mb-2 " style={{ backgroundColor: "#001f3f" }}
                     >
                       Log Out
                     </Link>
@@ -236,13 +244,13 @@ export default function TopNavbar() {
               )}
             </Nav>
             <Button variant="white">
-              <h4 className="text-black">
+              <h4 style={{ color: "#85144b" }}>
                 <AiOutlineHeart />
               </h4>
             </Button>
 
             <Button variant="white">
-              <h4 onClick={handleShowCart} className="text-black">
+              <h4 onClick={handleShowCart} style={{ color: "#85144b" }}>
                 <AiOutlineShoppingCart />
               </h4>
             </Button>
@@ -254,7 +262,7 @@ export default function TopNavbar() {
               size="md"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Shopping Cart</Offcanvas.Title>
+                <Offcanvas.Title className="fs-4">Shopping Cart</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -263,7 +271,7 @@ export default function TopNavbar() {
                       class="card shopping-cart"
                       style={{ borderRadius: "15px" }}
                     >
-                      <div class="card-body text-black">
+                      <div class="card-body">
                         <div class="row">
                           <div class="col-lg-12 ">
                             {cart.map((prod) => (
@@ -282,35 +290,38 @@ export default function TopNavbar() {
                                 <div class="flex-grow-1 ms-3">
                                   <a
                                     href="#!"
-                                    class="float-end text-black me-3"
+                                    class="float-end  me-3"
                                     onClick={() => dispatch(deleteProd(prod))}
+                                    style={{ color: "#85144b" }}
                                   >
                                     <AiOutlineDelete />
                                   </a>
-                                  <h5 class="text-primary w-75">
+                                  <h5 class="w-100" style={{color: "#001f3f"}}>
                                     {prod.title}
                                   </h5>
-                                  <h6 style={{ color: "#9e9e9e" }}>
+                                  <h6 style={{ color: "#85144b" }}>
                                     {prod.category}
                                   </h6>
                                   <div class="d-flex align-items-center">
-                                    <p class="fw-bold mb-0 me-5 pe-3">
+                                    <p class="fw-bold mb-0 me-5  d-flex" style={{color: "#001f3f"}}>
                                       ${prod.price}
                                     </p>
                                     <div class="def-number-input number-input safari_only">
                                       <span
                                         onClick={() => dispatch(incCount(prod))}
                                         class="me-1 pe-1"
+                                        style={{ color: "#85144b" }}
                                       >
                                         <AiOutlinePlus />
                                       </span>
-                                      <span class="me-1 pe-1">
+                                      <span class="me-1 pe-1" style={{color: "#001f3f"}}>
                                         {prod.count}
                                       </span>
 
                                       <span
                                         onClick={() => dispatch(decCount(prod))}
                                         class="me-1 pe-1"
+                                        style={{ color: "#85144b" }}
                                       >
                                         <AiOutlineMinus />
                                       </span>
@@ -324,17 +335,17 @@ export default function TopNavbar() {
                               class="mb-4"
                               style={{
                                 height: "2px",
-                                backgroundColor: "#1266f1",
+                                backgroundColor: "#001f3f",
                                 opacity: 1,
                               }}
                             />
 
                             <div
-                              class="d-flex justify-content-between p-2 mb-2"
-                              style={{ backgroundColor: "#e1f5fe" }}
+                              class="d-flex justify-content-between p-2 mb-2 rounded-3"
+                              style={{ backgroundColor: "#001f3f"}}
                             >
-                              <h5 class="fw-bold mb-0">Total:</h5>
-                              <h5 class="fw-bold mb-0">{total}$</h5>
+                              <h5 class="fw-bold mb-0 text-white">Total:</h5>
+                              <h5 class="fw-bold mb-0 text-white">$ {total}</h5>
                             </div>
                           </div>
                         </div>

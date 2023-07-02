@@ -37,7 +37,6 @@ function App() {
       <Route path="/promo" element={<Promotion/>}/>
       <Route path="/about" element={<About/>} />
       <Route path='/AllUsers' element={<GetAllUser/>}/>
-      <Route path='/singleProd' element={<SingleProduct/>}/>
       <Route path='/Prod-details/:id' element={<ProdDetails/>}/>
       <Route path='/UpdateProd/:id' element={<UpdateProd/>}/>
 
