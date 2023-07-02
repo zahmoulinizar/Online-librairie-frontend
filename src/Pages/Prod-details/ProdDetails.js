@@ -22,46 +22,48 @@ export default function ProdDetails() {
 
   return (
     <Container
-      className="border border-3 p-2 bg-secondary rounded-8 mt-2 "
+      className="rounded-8 mt-2 text-white"
       variant="top"
       position="top"
+      style={{ backgroundColor: "#85144b" }}
     >
       <div>
         <h2 className="text-center">{product?.title}</h2>
       </div>
-      <Row className="border border-3 m-2 p-4 gap-0 bg-black h-75 rounded-8">
-        <Col className="col-12 border border-3 p-4 bg-white col-lg-6">
-          <img src={product?.image?.url} alt="cover img" width="100%" />
+      <Row className=" m-2 p-4 gap-0  h-75 rounded-8"style={{ backgroundColor: "#001f3f" , border: "3px solid #001f3f"}}
+>
+        <Col className="col-12  p-4 bg-white col-lg-6 rounded-8" style={{ border: "3px solid #001f3f" }}>
+          <img src={product?.image?.url} alt="cover img" width="100%"  className="rounded-8"/>
         </Col>
-        <Col className="col-12 d-flex border border-2 bg-dark p-3  bg-white  col-lg-6">
-          <ListGroup className="rounded-8">
-            <ListGroup.Item disabled>
-              <strong>Publisher :</strong> {product?.publisher}
+        <Col className="col-12 d-flex  p-3  bg-white  col-lg-6 rounded-8" style={{ border: "3px solid #001f3f" }}>
+          <ListGroup className="rounded-8" style={{ border: "3px solid #001f3f" }}>
+            <ListGroup.Item  style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Publisher :</strong> {product?.publisher}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong>Price : </strong> $ {product?.price}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Price : </strong> $ {product?.price}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong>Description : </strong>
-              {product?.desc}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Description : </strong>
+              {product?.desc}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong>Author : </strong> {product?.author}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Author : </strong> {product?.author}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong>Year of edition : </strong>
-              {product?.editionYear}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+             <div style={{ color: "#001f3f" }}> <strong style={{ color: "#85144b" }}>Year of edition : </strong>
+              {product?.editionYear}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong></strong>
-              {product?.author}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Category : </strong>
+              {product?.category}</div>
             </ListGroup.Item>
-            <ListGroup.Item>
-              <strong>Genre : </strong>
-              {product?.genre}
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
+              <div style={{ color: "#001f3f" }}><strong style={{ color: "#85144b" }}>Genre : </strong>
+              {product?.genre}</div>
             </ListGroup.Item>
 
-            <ListGroup.Item>
+            <ListGroup.Item style={{ borderBottom: "3px solid #001f3f"}}>
               {product?.quantity > 0 ? (
                 <span className="text-success">
                   {" "}
