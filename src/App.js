@@ -10,7 +10,6 @@ import AddProduct from "./Pages/AddProduct"
 import Forgotpass from "./Pages/Forgetpass"
 import GetAllUser   from "./Pages/GetAllUser"
 import AdminDashboard  from "./Pages/AdminDashboard"
-import SingleProduct    from "./Pages/SingleProduct"
 import Login from './Pages/Login';
 import Footer from "./Components/footer/Footer"
 import About from './Pages/About';
