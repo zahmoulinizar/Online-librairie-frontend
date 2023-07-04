@@ -58,15 +58,11 @@ export default function Profile() {
   return (
     <Container>
       
-          <div class="row d-flex justify-content-center align-items-center flex-wrap">
-            <div class="col col-md-9 col-lg-10 col-xl-10 d-flex justify-content-center">
-              <div
-                class="card"
-                //style="border-radius: 15px;"
-              >
-                <div class="card-body ">
-                  <div class="d-flex text-black flex-wrap">
-                    <div class="flex-shrink-0">
+            <div class="m-auto w-50 d-flex  flex-column justify-content-center">
+             
+                <div class="d-flex  justify-content-center ">
+                  <div class="d-flex flex-wrap ">
+                    <div class="">
                       <img
                         src={users.image?.secure_url}
                         alt="Generic placeholder image"
@@ -75,7 +71,7 @@ export default function Profile() {
                       />
                     </div>
                     <hr/>
-                    <div class="flex-grow-1 ms-3 gap-4  ps-3 border-start">
+                    <div class="d-flex flex-column">
                       <h5 class="m-1 p-1">Name : {users.name}</h5>
                       <hr/>
                       <h6 class="m-1 p-1" style={{ color: "#2b2a2a" }}>
@@ -167,8 +163,6 @@ export default function Profile() {
                   </Form>
                 )}
               </div>
-            </div>
-          </div>
     </Container>
   );
 }
