@@ -53,8 +53,7 @@ export default function UpdateProd() {
   }, []);
 
   return (
-      <div className="m-2 p-3">
-        <Form>
+        <Form className="m-auto p-3 w-75">
           <Row>
             <Col>
               {" "}
@@ -232,6 +231,5 @@ export default function UpdateProd() {
             Save Changes
           </Button>
         </Form>
-      </div>
   );
 }
