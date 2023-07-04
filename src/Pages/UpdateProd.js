@@ -53,8 +53,7 @@ export default function UpdateProd() {
   }, []);
 
   return (
-    <div>
-      <div>
+      <div className="m-2 p-3">
         <Form>
           <Row>
             <Col>
@@ -234,6 +233,5 @@ export default function UpdateProd() {
           </Button>
         </Form>
       </div>
-    </div>
   );
 }
