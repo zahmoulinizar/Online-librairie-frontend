@@ -9,7 +9,6 @@ import { CgUnavailable } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Container, Row } from "react-bootstrap";
 
-//import './prodDetails.css'
 
 export default function ProdDetails() {
   const product = useSelector((state) => state.prod.product);

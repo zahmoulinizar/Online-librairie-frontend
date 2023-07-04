@@ -6,9 +6,7 @@ import Profile from './Pages/Profile';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import TopNavbar from "./Components/TopNavbar";
-import AddProduct from "./Pages/AddProduct"
 import Forgotpass from "./Pages/Forgetpass"
-import GetAllUser   from "./Pages/GetAllUser"
 import AdminDashboard  from "./Pages/AdminDashboard"
 import Login from './Pages/Login';
 import Footer from "./Components/footer/Footer"
@@ -28,14 +26,12 @@ function App() {
       <Route path="/Profile" element={<Profile/>} />
       <Route path="/Register" element={<Register />} />
       <Route path="/admin" element={<AdminDashboard />} />
-      <Route path="/newProd" element={<AddProduct  />} />
       <Route path="/reset" element={<Forgotpass />} />
       <Route path="/login" element={<Login />} />
       <Route path="/store" element={<OurStore/>}/>
       <Route path="/news" element={<New/>}/>
       <Route path="/promo" element={<Promotion/>}/>
       <Route path="/about" element={<About/>} />
-      <Route path='/AllUsers' element={<GetAllUser/>}/>
       <Route path='/Prod-details/:id' element={<ProdDetails/>}/>
       <Route path='/UpdateProd/:id' element={<UpdateProd/>}/>
 

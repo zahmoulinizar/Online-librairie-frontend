@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
 import { updateUser } from "../redux/Slice/userSlice";
 import { useDispatch } from "react-redux";
 import Form from "react-bootstrap/Form";
