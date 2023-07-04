@@ -57,19 +57,15 @@ export default function Profile() {
 
   return (
     <Container>
-      <section
-        class="vh-100"
-        //style={{backgroundColor: '#9de2ff'}}
-      >
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center ">
+      
+          <div class="row d-flex justify-content-center align-items-center flex-wrap">
             <div class="col col-md-9 col-lg-10 col-xl-10 d-flex justify-content-center">
               <div
                 class="card"
                 //style="border-radius: 15px;"
               >
                 <div class="card-body ">
-                  <div class="d-flex text-black">
+                  <div class="d-flex text-black flex-wrap">
                     <div class="flex-shrink-0">
                       <img
                         src={users.image?.secure_url}
@@ -173,8 +169,6 @@ export default function Profile() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
     </Container>
   );
 }
