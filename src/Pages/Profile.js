@@ -4,9 +4,8 @@ import Button from "react-bootstrap/Button";
 import { updateUser } from "../redux/Slice/userSlice";
 import { useDispatch } from "react-redux";
 import Form from "react-bootstrap/Form";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import img from "../Assets/Images/1.png";
 
 export default function Profile() {
   const dispatch = useDispatch();
@@ -57,112 +56,92 @@ export default function Profile() {
 
   return (
     <Container>
-      
-            <div class="m-auto w-50 d-flex  flex-column justify-content-center">
-             
-                <div class="d-flex  justify-content-center ">
-                  <div class="d-flex flex-wrap ">
-                    <div class="">
-                      <img
-                        src={users.image?.secure_url}
-                        alt="Generic placeholder image"
-                        class="img-fluid"
-                        style={{ width: "180px", borderRadius: "10px" }}
-                      />
-                    </div>
-                    <hr/>
-                    <div class="d-flex flex-column">
-                      <h5 class="m-1 p-1">Name : {users.name}</h5>
-                      <hr/>
-                      <h6 class="m-1 p-1" style={{ color: "#2b2a2a" }}>
-                        Email : {users.email}
-                      </h6>
-                      <hr/>
-                      <h6 class="mb-2 pb-1" style={{ color: "#2b2a2a" }}>
-                        Address : {users.address}
-                      </h6>
-                      <hr/>
-                      <h6 class="mb-2 pb-1" style={{ color: "#2b2a2a" }}>
-                        Phone : {users.phone}
-                      </h6>
-                      <hr/>
-                      <div
-                        class="d-flex justify-content-start rounded-3 p-2 mb-2"
-                        //style="background-color: #efefef;"
-                      >
-                       
-                      </div>
-                      <div class="d-flex pt-1">
-                        {!isEdit && <Link
-                          className="w-100 border border-2 text-center fs-5  p-1 text-uppercase text-white"
-                          style={{ backgroundColor: "#001f3f" }}
-                          onClick={() => setIsEdit(true)}
-                        >
-                          Update
-                        </Link>}
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                {isEdit && (
-                  <Form
-                    className="m-4 p-3"
-                    style={{
-                      width: "25rem",
-                      height: "25rem",
-                      borderRadius: "8px",
-                    }}
-                  >
-                    <Form.Group className="mb-3" controlId="formGroupName">
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter UserName"
-                        onChange={(e) => setName(e.target.value)}
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupPassword">
-                      <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupPassword">
-                      <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        onChange={(e) => setPhone(e.target.value)}
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupPassword">
-                      <Form.Control
-                        type="password"
-                        placeholder="Password"
-                        onChange={(e) => setAddress(e.target.value)}
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formGroupImage">
-                      <Form.Label>Image</Form.Label>
-                      <Form.Control
-                        type="file"
-                        accept="image/"
-                        onChange={uploadHandler}
-                      />
-                    </Form.Group>
-                    <Button
-                      className="w-100 border border-2 text-center fs-5  p-1 text-uppercase"
-                      style={{ backgroundColor: "#001f3f" }}
-                      type="submit"
-                      onClick={updateHandler}
-                    >
-                      Edit
-                    </Button>
-                  </Form>
-                )}
-              </div>
+      <div className="m-auto w-100 d-flex  flex-wrap  justify-content-center p-5  m gap-2">
+        <div className="d-flex flex-wrap  justify-content-center gap-2">
+          <div >
+            <img
+              src={users.image?.secure_url}
+              alt="image"
+              class="img-fluid"
+              style={{ width: "180px", height:"180px" , borderRadius: "10px" }}
+            />
+          </div>
+          <div className="d-flex flex-column gap-3  ">
+            <h5 class="m-1 p-1" style={{ color: " #001f3f" }}>Name : {users.name}</h5>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}> Email : {users.email}</h6>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}>Address : {users.address}</h6>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}>Phone : {users.phone}</h6>
+            <div class="d-flex pt-1 justify-content-center w-75">
+              {!isEdit && (
+                <Link
+                  className="w-100 border border-2 text-center fs-5  p-1 text-uppercase text-white"
+                  style={{ backgroundColor: "#001f3f" }}
+                  onClick={() => setIsEdit(true)}
+                >
+                  Update
+                </Link>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="d-flex flex-column ">
+          {isEdit && (
+            <Form
+              className="mt-4"
+              style={{
+                width: "25rem",
+                height: "25rem",
+                borderRadius: "8px",
+              }}
+            >
+              <Form.Group className="mb-3" controlId="formGroupName">
+                <Form.Control
+                  type="text"
+                  placeholder="Enter UserName"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formGroupPassword">
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formGroupPassword">
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formGroupPassword">
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formGroupImage">
+                <Form.Label>Image</Form.Label>
+                <Form.Control
+                  type="file"
+                  accept="image/"
+                  onChange={uploadHandler}
+                />
+              </Form.Group>
+              <Button
+                className="w-100 border border-2 text-center fs-5  p-1 text-uppercase"
+                style={{ backgroundColor: "#001f3f" }}
+                type="submit"
+                onClick={updateHandler}
+              >
+                Edit
+              </Button>
+            </Form>
+          )}
+        </div>
+      </div>
     </Container>
   );
 }

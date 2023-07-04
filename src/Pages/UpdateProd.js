@@ -53,7 +53,8 @@ export default function UpdateProd() {
   }, []);
 
   return (
-        <Form className="m-auto p-3 w-75">
+    
+        <Form className="m-auto p-2 w-75">
           <Row>
             <Col>
               {" "}
@@ -231,5 +232,6 @@ export default function UpdateProd() {
             Save Changes
           </Button>
         </Form>
+  
   );
 }
