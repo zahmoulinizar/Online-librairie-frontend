@@ -9,6 +9,8 @@ import { CgUnavailable } from "react-icons/cg";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Container, Row } from "react-bootstrap";
 
+//import './prodDetails.css'
+
 export default function ProdDetails() {
   const product = useSelector((state) => state.prod.product);
   const dispatch = useDispatch();
@@ -28,7 +30,7 @@ export default function ProdDetails() {
       <div>
         <h2 className="text-center">{product?.title}</h2>
       </div>
-      <Row className=" m-2 p-2 gap-0  h-100 rounded-8 p-md-1 p-sm-0"style={{ backgroundColor: "#001f3f" , border: "3px solid #001f3f"}}
+      <Row className=" m-2 p-2 gap-0  h-100 rounded-8 p-md-1 p-sm-0" style={{ backgroundColor: "#001f3f" , border: "3px solid #001f3f"}}
 >
         <Col className="col-12  p-2 bg-white col-lg-6 rounded-8 p-md-1 p-sm-0" style={{ border: "3px solid #001f3f" }}>
           <img src={product?.image?.url} alt="cover img" width="100%"  className="rounded-8"/>
