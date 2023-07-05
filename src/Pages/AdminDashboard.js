@@ -403,8 +403,8 @@ function AdminDashboard() {
         }
       </div>
 
-      <div class="row">
-        <div class="mt-6 col-xl-6 col-lg-6 col-md-12 col-12">
+      <div class="row d-flex justify-content-center">
+        <div class="mt-6 col-xl-4 col-lg-6 col-md-12 col-12">
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-3">
@@ -437,7 +437,7 @@ function AdminDashboard() {
           </div>
         </div>
         
-        <div class="mt-6 col-xl-6 col-lg-6 col-md-12 col-12">
+        <div class="mt-6 col-xl-4 col-lg-6 col-md-12 col-12">
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-3">
