@@ -404,7 +404,7 @@ function AdminDashboard() {
       </div>
 
       <div class="row">
-        <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+        <div class="mt-6 col-xl-6 col-lg-6 col-md-12 col-12">
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-3">
@@ -436,43 +436,8 @@ function AdminDashboard() {
             </div>
           </div>
         </div>
-        <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <h4 class="mb-0">Active Task</h4>
-                </div>
-                <div class="icon-shape icon-md bg-light-primary text-primary rounded-2">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    width="18"
-                    height="18"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"
-                    ></path>
-                    <path d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"
-                    ></path>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h1 class="fw-bold">132</h1>
-                <p class="mb-0">
-                  <span classname="text-dark me-2">28</span> Completed
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
+        
+        <div class="mt-6 col-xl-6 col-lg-6 col-md-12 col-12">
           <div class="card">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-3">
@@ -492,24 +457,7 @@ function AdminDashboard() {
             </div>
           </div>
         </div>
-        <div class="mt-6 col-xl-3 col-lg-6 col-md-12 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <h4 class="mb-0">Category</h4>
-                </div>
-                <div class="icon-shape icon-md bg-light-primary text-primary rounded-2">
-                 
-                </div>
-              </div>
-              <div>
-                <h1 class="fw-bold">{TotalCat.length}</h1>
-               
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {
