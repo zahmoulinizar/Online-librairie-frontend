@@ -67,10 +67,10 @@ export default function Profile() {
             />
           </div>
           <div className="d-flex flex-column gap-3  ">
-            <h5 class="m-1 p-1" style={{ color: " #001f3f" }}>Name : {users.name}</h5>
-            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}> Email : {users.email}</h6>
-            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}>Address : {users.address}</h6>
-            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}>Phone : {users.phone}</h6>
+            <h5 class="m-1 p-1" style={{ color: " #001f3f" }}><h4 style={{color: "#85144b"}}>Name :</h4> {users.name}</h5>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}><h5 style={{color: "#85144b"}}>Email :</h5> {users.email}</h6>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}><h5 style={{color: "#85144b"}}>Address :</h5> {users.address}</h6>
+            <h6 class="m-1 p-1" style={{ color: " #001f3f" }}><h5 style={{color: "#85144b"}}>Phone : </h5>{users.phone}</h6>
             <div class="d-flex pt-1 justify-content-center w-75">
               {!isEdit && (
                 <Link
@@ -98,39 +98,47 @@ export default function Profile() {
                   type="text"
                   placeholder="Enter UserName"
                   onChange={(e) => setName(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Control
                   type="password"
-                  placeholder="Password"
+                  placeholder="Your password"
                   onChange={(e) => setPassword(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  onChange={(e) => setPhone(e.target.value)}
+                  type="number"
+                  placeholder="Your phone number"
+                  onChange={(e) => setPhone(e.target.value)}className="rounded-5 "
+                  style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupPassword">
                 <Form.Control
-                  type="password"
-                  placeholder="Password"
+                  type="text"
+                  placeholder="Your address"
                   onChange={(e) => setAddress(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formGroupImage">
-                <Form.Label>Image</Form.Label>
                 <Form.Control
                   type="file"
                   accept="image/"
                   onChange={uploadHandler}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <Button
-                className="w-100 border border-2 text-center fs-5  p-1 text-uppercase"
+                className="w-100 text-center fs-5  p-1 text-uppercase"
                 style={{ backgroundColor: "#001f3f" }}
                 type="submit"
                 onClick={updateHandler}

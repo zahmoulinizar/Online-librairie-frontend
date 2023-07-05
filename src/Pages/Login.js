@@ -48,7 +48,6 @@ export default function Login() {
         <Col lg="4" md="6">
           <Form
             className="w-100 h-100 d-flex flex-column flex-wrap gap-4  p-4 rounded-8 "
-            style={{ border: "3px solid #001f3f", color: "#85144b" }}
           >
             <Form.Group className="mb-3" controlId="formGroupEmail">
               <Form.Label style={{ color: "#001f3f" }}>

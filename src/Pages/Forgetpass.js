@@ -31,7 +31,7 @@ function Forgetpass() {
   };
   return (
     <div className="w-100 h-100 d-flex flex-column flex-wrap gap-4  p-4 rounded-8 "
-    style={{ border: "3px solid #001f3f", color: "#85144b" }}>
+    >
       <p
         className="forget-parg fs-5 w-100  text-center fs-5  "
         style={{ color: "#85144b" }}

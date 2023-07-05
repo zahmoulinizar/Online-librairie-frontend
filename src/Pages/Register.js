@@ -54,7 +54,6 @@ function Register() {
           {" "}
           <Form
            className="w-100 h-100 d-flex flex-column flex-wrap gap-4  p-4 rounded-8 "
-           style={{ border: "3px solid #001f3f" }}
             enctype="multipart/form-data"
             height={"100%"}
           >

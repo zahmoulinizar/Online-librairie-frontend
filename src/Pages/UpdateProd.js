@@ -62,12 +62,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Title</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Title"
                   autoFocus
                   onChange={(e) => setTitle(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>
@@ -78,12 +79,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Genre</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Genre"
                   autoFocus
                   onChange={(e) => setGenre(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>
@@ -92,12 +94,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Publisher</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Publisher"
                   autoFocus
                   onChange={(e) => setPublisher(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>
@@ -106,12 +109,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Author</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Author"
                   autoFocus
                   onChange={(e) => setAuthor(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>{" "}
@@ -122,11 +126,12 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Category</Form.Label>
 
                 <Form.Select
                   aria-label="Default select example"
                   onChange={(e) => setCategory(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 >
                   <option>Select your category</option>
                   <option value="Tunisien edition book">
@@ -150,12 +155,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Price</Form.Label>
                 <Form.Control
                   type="number"
                   placeholder="price"
                   autoFocus
                   onChange={(e) => setPrice(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>{" "}
@@ -164,12 +170,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Quantity</Form.Label>
                 <Form.Control
                   type="number"
                   placeholder="Quantity"
                   autoFocus
                   onChange={(e) => setQuantity(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>
@@ -181,7 +188,6 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>description</Form.Label>
 
                 <FloatingLabel
                   controlId="floatingTextarea2"
@@ -189,9 +195,10 @@ export default function UpdateProd() {
                 >
                   <Form.Control
                     as="textarea"
-                    style={{ height: "100px" }}
                     autoFocus
                     onChange={(e) => setDesc(e.target.value)}
+                    className="rounded-5 "
+                    style={{ border: "3px solid #001f3f", color: "#85144b"  ,height: "100px"}}
                   />
                 </FloatingLabel>
               </Form.Group>
@@ -203,12 +210,13 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Year of edition </Form.Label>
                 <Form.Control
                   type="number"
                   placeholder="Year of edition"
                   autoFocus
                   onChange={(e) => setEditionYear(e.target.value)}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
             </Col>
@@ -217,18 +225,20 @@ export default function UpdateProd() {
                 className="mb-3"
                 controlId="exampleForm.ControlInput1"
               >
-                <Form.Label>Image</Form.Label>
                 <Form.Control
                   type="file"
                   accept="image/"
                   autoFocus
                   onChange={uploadHandler}
+                  className="rounded-5 "
+                style={{ border: "3px solid #001f3f", color: "#85144b" }}
                 />
               </Form.Group>
               <img src={image} alt="" height={32} width={32} />
             </Col>
           </Row>
-          <Button variant="primary" onClick={updateProdhandler}>
+          <Button variant="primary" onClick={updateProdhandler} className="w-100  text-center fs-5  p-1 text-uppercase  rounded-3 "
+              style={{ backgroundColor: "#001f3f" }}>
             Save Changes
           </Button>
         </Form>
