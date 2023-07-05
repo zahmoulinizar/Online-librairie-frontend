@@ -61,7 +61,7 @@ export default function Profile() {
           <div >
             <img
               src={users.image?.secure_url}
-              alt="image"
+              alt=" image"
               class="img-fluid"
               style={{ width: "180px", height:"180px" , borderRadius: "10px" }}
             />
@@ -84,13 +84,12 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div className="d-flex flex-column ">
+        <div className="d-flex flex-column  p-3">
           {isEdit && (
             <Form
-              className="mt-4"
+              className="m-4"
               style={{
-                width: "25rem",
-                height: "25rem",
+                width: "18rem",
                 borderRadius: "8px",
               }}
             >

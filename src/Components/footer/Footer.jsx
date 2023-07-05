@@ -117,7 +117,7 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="col-md-4 col-lg-6 col-xl-3  col-sm-6  col-6 ">
+            <div className="col-md-4 col-lg-6 col-xl-3  col-sm-6  col-12 ">
               <h6 className=" fw-bold mb-4">Contact</h6>
               <p>
                 <i className="fas fa-home me-3 text-secondary"></i> Tunisia
@@ -136,10 +136,10 @@ const Footer = () => {
                 567 89
               </p>
             </div>
-            <div className="col-md-12 col-lg-6 col-xl-3  col-sm-6 col-6 ">
+            <div className="col-md-12 col-lg-6 col-xl-3  col-sm-6 col-12 ">
               <form action="">
                 <div className="row">
-                  <div className="col-md-12 col-12 mb-4 mb-md-0">
+                  <div className="col-md-12 col-12 mb-2 mb-md-0">
                     <a href="mailto:nizarzahmouli351@gmail.com" className="text-white">
                       nizarzahmouli351@gmail.com
                     </a>
@@ -147,7 +147,7 @@ const Footer = () => {
 
                   <div className="mt-3 me-2">
                     © 2023 Copyright :
-                    <span className="mt-4">maktabti.onrender.com</span>
+                    <span className="me-2">maktabti.onrender.com</span>
                   </div>
                 </div>
               </form>
