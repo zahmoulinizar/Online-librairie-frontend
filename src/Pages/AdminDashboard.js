@@ -140,7 +140,7 @@ function AdminDashboard() {
         <Button
           variant="primary"
           onClick={handleShow}
-          className="w-25  text-center fs-5  p-2 text-uppercase  rounded-3 "
+          className="w-50  text-center fs-5  p-2 text-uppercase  rounded-3 "
           style={{ backgroundColor: "#001f3f" }}
         >
           new product
