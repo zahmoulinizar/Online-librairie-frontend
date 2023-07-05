@@ -40,6 +40,8 @@ export default function Profile() {
     setIsEdit(false);
     setName("");
     setPassword("");
+    setAddress("");
+    setPhone("");
   };
   const uploadHandler = (e) => {
     const file = e.target.files[0];

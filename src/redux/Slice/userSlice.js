@@ -67,7 +67,7 @@ export const updateUser = createAsyncThunk(
     try {
       const res = await axios.put(process.env.REACT_APP_BASE_URL +"/user/update",
         {
-          userName: user.userName,
+          name: user.name,
           password: user.password,
           phone: user.phone,
           address: user.address,
@@ -112,6 +112,7 @@ export const updatePassword = createAsyncThunk(
       const res = await axios.put(process.env.REACT_APP_BASE_URL +`/user/update-password/${id}`,
         {
           password:password,
+      
         },
         {
           headers: {
